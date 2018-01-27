@@ -20,8 +20,8 @@ if os.path.isfile("YT.txt") == False:
 	    fileCreated.write("https://youtu.be/BZg8BhBWyo8")
 
 #The User can set the time they want to wake up. The String the user puts in must be the same as the example to work.
-print "What time do you want to wake up?"
-print "Use this form.\nExample: 06:30"
+print "What time would you like to wake up?"
+print "Use this form.\nExample: 08:30"
 Alarm = raw_input("> ")
 
 
@@ -30,19 +30,19 @@ Time = time.strftime("%H:%M")
 
 #This opens the text file with the youtube links
 with open("YT.txt") as f:
-	#the urls are stored in the content variable 
+	#the urls are stored in the content variable
 	content = f.readlines()
 
 
 #When the Time does not equal the Alarm time string given above, print the time
 while Time != Alarm:
-	
+
 	print "The time is " + Time
-	
+
 	#Restating the Time variable allows the time to refresh
 	#When I tried keeping the variable outside of the loop it just repeated the inital time
 	Time = time.strftime("%H:%M")
-	
+
 	#This keeps the loop from flooding the command line with updates of the time :P
 	time.sleep(1)
 
