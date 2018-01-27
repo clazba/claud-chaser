@@ -37,7 +37,7 @@ with open("YT.txt") as f:
 #When the Time does not equal the Alarm time string given above, print the time
 while Time != Alarm:
 
-	print "The time is " + Time
+	print "The time is: " + Time
 
 	#Restating the Time variable allows the time to refresh
 	#When I tried keeping the variable outside of the loop it just repeated the inital time
